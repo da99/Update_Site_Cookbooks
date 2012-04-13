@@ -24,6 +24,8 @@ Installation
 Usage
 ------
 
+On your command line:
+
     knife cookbook site install openssh
     knife cookbook site install nginx
     knife cookbook site install varnish
