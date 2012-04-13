@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+# -*- ruby -*-
+# 
+
+
+require "Exit_Zero"
+
+PREFIX = "chef-vendor-"
+%!
+  git branch
+!.strip.split("\n").each { |raw|
+  line = raw.strip
+  next unless line[ %r!^#{PREFIX}! ]
+  name = line.sub(PREFIX)
+  Exit_Zero "knife cookbook site install #{name}"
+}
+
+

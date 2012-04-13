@@ -1,21 +1,32 @@
 
-Update_Site_Cookbooks
+Update\_Site\_Cookbooks
 ================
 
-A Ruby\_gem.
+If you use git and "knife cookbook site": you can use this
+gem to update (aka re-download) your site cookbooks 
+to their latest versions.  It uses your git branch names
+that begin with "chef-vender-" to determine which 
+cookbooks to download.
 
 Installation
 ------------
 
     gem 'Update_Site_Cookbooks'
 
-Useage
+Usage
 ------
 
-    require "Update_Site_Cookbooks"
-    
+One way:
+
+    git branch chef-vendor-openssh
     Update_Site_Cookbooks
 
+Another way:
+
+    knife cookbook site install openssh
+    knife cookbook site install nginx
+    knife cookbook site install varnish
+    Update_Site_Cookbooks
 
 Run Tests
 ---------

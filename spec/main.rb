@@ -4,6 +4,16 @@ require 'Update_Site_Cookbooks'
 require 'Bacon_Colored'
 require 'pry'
 
+TEMP = "/tmp/Update_Site_Cookbooks"
+`rm -rf #{TEMP}`
+`mkdir -p #{TEMP}`
+
+def chdir name = ""
+  dir = File.join(TEMP, name)
+  `mkdir -p #{dir}` unless File.directory?(dir)
+  
+  Dir.chdir(dir) { yield }
+end
 
 # ======== Include the tests.
 if ARGV.size > 1 && ARGV[1, ARGV.size - 1].detect { |a| File.exists?(a) }
