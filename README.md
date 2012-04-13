@@ -24,13 +24,6 @@ Installation
 Usage
 ------
 
-One way:
-
-    git branch chef-vendor-openssh
-    Update_Site_Cookbooks
-
-Another way:
-
     knife cookbook site install openssh
     knife cookbook site install nginx
     knife cookbook site install varnish
