@@ -6,12 +6,16 @@
 require "Exit_Zero"
 
 PREFIX = "chef-vendor-"
-%!
+
+Exit_Zero( %!
   git branch
-!.strip.split("\n").each { |raw|
+!).out.strip.split("\n").each { |raw|
   line = raw.strip
+  name = line.sub(PREFIX, '')
+  
   next unless line[ %r!^#{PREFIX}! ]
-  name = line.sub(PREFIX)
+  next if !ARGV.empty? && !ARGV.include?(name)
+  
   Exit_Zero "knife cookbook site install #{name}"
 }
 

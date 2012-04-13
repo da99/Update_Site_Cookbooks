@@ -11,11 +11,8 @@ Gem::Specification.new do |s|
   s.homepage    = "https://github.com/da99/Update_Site_Cookbooks"
   s.summary     = %q{Update opscode cookbooks you downloaded.}
   s.description = %q{
-    If you use git and "knife cookbook site": you can use this
-    gem to update (aka re-download) your site cookbooks 
-    to their latest versions.  It uses your git branch names
-    that begin with "chef-vender-" to determine which 
-    cookbooks to download.
+    This gem automates updating all your cookbooks installed with: 
+    "knife cookbook site install NAME".
   }
 
   s.files         = `git ls-files`.split("\n")

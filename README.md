@@ -2,11 +2,19 @@
 Update\_Site\_Cookbooks
 ================
 
-If you use git and "knife cookbook site": you can use this
-gem to update (aka re-download) your site cookbooks 
-to their latest versions.  It uses your git branch names
+
+This gem automates updating all your cookbooks installed with: 
+"knife cookbook site install NAME".
+
+Implementation
+==============
+
+It uses your git branch names
 that begin with "chef-vender-" to determine which 
-cookbooks to download.
+cookbooks to download.  
+
+All the code is in one page: 
+[https://github.com/da99/Update\_Site\_Cookbooks/blob/master/bin/Update\_Site\_Cookbooks](https://github.com/da99/Update_Site_Cookbooks/blob/master/bin/Update_Site_Cookbooks)
 
 Installation
 ------------

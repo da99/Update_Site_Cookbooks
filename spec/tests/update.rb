@@ -7,7 +7,8 @@ end
 def git_init
   Multi_Exit %!
     git init 
-    touch README.md
+    mkdir cookbooks
+    touch cookbooks/.gitkeep
     git add .
     git commit -m "First."
   !
@@ -18,6 +19,7 @@ describe "Update_Site_Cookbooks (bin executable)" do
   it "downloads site cookbook for any git branch starting with 'chef-vendor-'" do
     chdir("News") {
       git_init
+      
       Multi_Exit %!
         git branch "chef-vendor-openssh"
         Update_Site_Cookbooks
@@ -35,6 +37,7 @@ describe "Update_Site_Cookbooks (bin executable)" do
         Update_Site_Cookbooks nginx
       !
       File.directory?("cookbooks/openssh").should.be == false
+      File.directory?("cookbooks/nginx").should.be == true
     }
   end
   
