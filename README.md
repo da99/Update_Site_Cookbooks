@@ -19,7 +19,7 @@ All the code is in one page:
 Installation
 ------------
 
-    gem 'Update_Site_Cookbooks'
+    gem install 'Update_Site_Cookbooks'
 
 Usage
 ------
