@@ -24,7 +24,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rake'
   s.add_development_dependency 'Bacon_Colored'
   s.add_development_dependency 'pry'
-  s.add_development_dependency 'Exit_Zero'
+  s.add_development_dependency 'Exit_0'
   
   # s.rubyforge_project = "Update_Site_Cookbooks"
   # specify any dependencies here; for example:

@@ -3,11 +3,11 @@
 # 
 
 
-require "Exit_Zero"
+require "Exit_0"
 
 PREFIX = "chef-vendor-"
 
-Exit_Zero( %!
+Exit_0( %!
   git branch
 !).out.strip.split("\n").each { |raw|
   line = raw.strip
@@ -16,7 +16,7 @@ Exit_Zero( %!
   next unless line[ %r!^#{PREFIX}! ]
   next if !ARGV.empty? && !ARGV.include?(name)
   
-  Exit_Zero "knife cookbook site install #{name}"
+  Exit_0 "knife cookbook site install #{name}"
 }
 
 

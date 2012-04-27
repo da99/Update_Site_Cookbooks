@@ -3,7 +3,7 @@ require File.expand_path('spec/helper')
 require 'Update_Site_Cookbooks'
 require 'Bacon_Colored'
 require 'pry'
-require 'Exit_Zero'
+require 'Exit_0'
 
 TEMP = "/tmp/Update_Site_Cookbooks"
 `rm -rf #{TEMP}`

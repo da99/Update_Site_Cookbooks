@@ -1,6 +1,6 @@
 def Multi_Exit str
   str.strip.split("\n").each { |line|
-    Exit_Zero line
+    Exit_0 line
   }
 end
 
